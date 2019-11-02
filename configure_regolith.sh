@@ -8,6 +8,7 @@ cp /etc/regolith/i3/config $I3CONFIG
 
 sed -i 's/\/usr\/bin\/st/\/usr\/bin\/gnome-terminal/g' $I3CONFIG
 sed -i 's/bar {/bar {\n  mode hide/g' $I3CONFIG
+sed -i 's/tray_output none/tray_output primary/g' $I3CONFIG
 # theming
 echo 'performing regolith theming...'
 cp -n /etc/regolith/styles/root ~/.Xresources-regolith
