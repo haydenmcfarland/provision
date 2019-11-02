@@ -1,5 +1,4 @@
-sudo mkdir -p $HOME/.rbenv/shims
-sudo mkdir -p $HOME/.rbenv/versions
+sudo chown -R $USER ~/.rbenv
 
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
