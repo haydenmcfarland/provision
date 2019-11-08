@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if ! [ -f ~/.config/regolith/i3/config ]
 then
 # initialize i3 config

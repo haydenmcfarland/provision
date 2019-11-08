@@ -10,3 +10,8 @@ echo 'cleaning up obsolete packages...'
 sudo apt auto-remove -y
 
 ./configure_regolith.sh
+
+//sdfkaoskdfapsd
+
+aspdfla[sdlpf
+alsdp[fl[asdlfp[l]]]]

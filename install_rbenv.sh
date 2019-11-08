@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo chown -R $USER ~/.rbenv
 
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv

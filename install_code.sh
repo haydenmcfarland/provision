@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if ! [ -f /etc/apt/sources.list.d/vscode.list ];
 then
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
