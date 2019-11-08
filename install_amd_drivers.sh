@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo add-apt-repository -r ppa:oibaf/graphics-drivers -y
 sudo add-apt-repository ppa:oibaf/graphics-drivers
 
