@@ -1,3 +1,4 @@
 google-chrome
 visual-studio-code
 alacritty
+amethyst
