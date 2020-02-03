@@ -1,1 +1,4 @@
 git
+postgresql
+rbenv
+soundcleod
