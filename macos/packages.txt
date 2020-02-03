@@ -1,4 +1,3 @@
 git
 postgresql
 rbenv
-soundcleod
