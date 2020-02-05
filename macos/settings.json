@@ -1,4 +1,8 @@
 {
     "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
-    "terminal.integrated.shell.osx": "/bin/zsh"
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "editor.rulers": [80],
+    "editor.detectIndentation": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
 }
