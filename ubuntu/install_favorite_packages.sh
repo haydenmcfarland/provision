@@ -2,6 +2,9 @@
 
 # add repositories
 echo 'removing repositories and re-adding them'
+sudo add-apt-repository --remove ppa:kgilmer/regolith-stable -y
+sudo add-apt-repository ppa:regolith-linux/release -y
+sudo apt dist-upgrade -y
 sudo add-apt-repository -r ppa:kgilmer/regolith-stable -y
 sudo add-apt-repository -r ppa:otto-kesselgulasch/gimp -y
 sudo add-apt-repository ppa:kgilmer/regolith-stable -y

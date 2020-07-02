@@ -1,15 +1,26 @@
 #!/bin/bash
 
-curl -O https://storage.googleapis.com/golang/go1.13.4.linux-amd64.tar.gz
-tar -xvf go1.13.4.linux-amd64.tar.gz
-sudo mv go /usr/local
-sudo rm go1.13.4.linux-amd64.tar.gz
+# used to specify where the go work directory will be located
+GO_DIR=$HOME/Git/go
 
+# fetch latest go version from website
+VERSION=$(
+  curl -s https://golang.org/dl/ | grep -Po -m 1 'go1.1\d\.\d' | head -1
+)
+
+# download and extract go and move to /usr/local
+TARGET_FILE="$VERSION.linux-amd64.tar.gz"
+curl -O https://storage.googleapis.com/golang/$TARGET_FILE
+tar -xvf $TARGET_FILE
+sudo rsync -a -v go /usr/local --remove-source-files
+sudo rm $TARGET_FILE
+
+# set up GOPATH
 if grep -q "GOPATH" ~/.profile;
 then echo 'GOPATH already configured'
 else
-echo "export GOPATH=$HOME/go_projects" >> ~/.profile
-echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.profile
+  sudo mkdir -p $GO_DIR
+  echo "export GOROOT=/usr/local/go" >> ~/.profile
+  echo "export GOPATH=$GO_DIR" >> ~/.profile
+  echo "export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin" >> ~/.profile
 fi
-
-sudo mkdir ~/go_projects

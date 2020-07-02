@@ -2,4 +2,4 @@
 
 ## Summary:
 
-A collection of provisioning scripts to set up my own PC (Ubuntu/macos).
+A collection of provisioning scripts for setting up development environments on different platforms.
